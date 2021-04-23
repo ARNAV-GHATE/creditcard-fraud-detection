@@ -57,9 +57,9 @@ def home():
 
             prediction, probability = predict_default(feature_values)
             if prediction[0] == 1:
-                alert_message = "This account will be defaulted with a probability of {}%.".format(round(np.max(probability)*100, 2))
+                alert_message = "This account will be Fraud with a probability of {}%.".format(round(np.max(probability)*100, 2))
             else:
-                success_message = "This account will not be defaulted with a probability of {}%.".format(round(np.max(probability)*100, 2))
+                success_message = "This account will not be Fraud with a probability of {}%.".format(round(np.max(probability)*100, 2))
     except:
         alert_message = "Please enter relevant information."
 
